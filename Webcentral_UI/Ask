@@ -1,0 +1,31 @@
+In Config.properties
+
+Query 1
+WC_Login_CreateAcct_ForgotPwd_UI
+String login=prop.getProperty("WC_login");
+	driver.findElement(By.xpath(login)).click();
+    Thread.sleep(5000);
+    
+    Cant i use in another @test method the variable login
+    
+    Query 2
+    
+    In One java class various @test methods can we call as scenarios?
+    
+    Query 3
+    Only one letter coming in textboxes under Billing page
+    And two drop down is there
+    
+
+endtoend_Webhosting_OneProd
+After create an acct it should goto "Billing Page" but not going
+
+endtoend_domains_purchase-shadow element could be possible
+//looks like hidden element unable to add cant find xpath looks like shawdow root
+Shawdow element wil be dicussed by afxal
+
+How did u get Path
+FileInputStream fis = new FileInputStream(System.getProperty("user.dir")+"\\properties\\config.properties");
+		prop.load(fis);
+		
+		
