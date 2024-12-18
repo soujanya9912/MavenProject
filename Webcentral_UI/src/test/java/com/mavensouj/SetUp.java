@@ -42,7 +42,7 @@ public class SetUp {
 	@AfterClass
 	public void Cleanup()
 	{
-		driver.quit();
+		//driver.quit();
 	}
 
 }

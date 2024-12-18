@@ -9,7 +9,7 @@ import org.testng.annotations.Test;
 import com.github.javafaker.Faker;
 
 public class WC_Login_CreateAcct_ForgotPwd_UI extends SetUp{
-@Test
+@Test(priority=1)
 	public void creatLoginacct() throws InterruptedException
 	{
 		
@@ -28,20 +28,22 @@ driver.findElement(By.xpath(login_PWD)).sendKeys(login_PWD_Data);
 
 
 String WC_Lo_Submit=prop.getProperty("WC_Login_Submit");
-driver.findElement(By.xpath(WC_Lo_Submit)).click();
+driver.findElement(By.xpath(WC_Lo_Submit)).click(); 
+
+Thread.sleep(10000);
 }
 
 
 
-@Test
+@Test(priority=2)
 	public void forgotpassword() throws InterruptedException
 	{
-	String login=prop.getProperty("WC_login");
-	driver.findElement(By.xpath(login)).click();
- 
- 
- Thread.sleep(5000);
- 
+//	String login=prop.getProperty("WC_login");
+//	driver.findElement(By.xpath(login)).click();
+// 
+// 
+// Thread.sleep(5000);
+// 
  String FPWD=prop.getProperty("Forgot_PWD");
 driver.findElement(By.xpath(FPWD)).click();
 
@@ -52,19 +54,21 @@ driver.findElement(By.xpath(PWDUN)).sendKeys(PWDUN_Data);
 String FPWD_Button=prop.getProperty("FPWD_button");
 driver.findElement(By.xpath(FPWD_Button)).click();
 
+Thread.sleep(10000);
+
 
 	}
 
-@Test
+@Test(priority=3)
 public void Createacct() throws InterruptedException
 {
 Faker faker=new Faker();
 String firstName=faker.name().firstName();
 String lastName=faker.name().lastName();
 String email=firstName.toLowerCase() + "." + lastName.toLowerCase() + "@domain.com";
-String WC_Loginv=prop.getProperty("WC_login");
-driver.findElement(By.xpath(WC_Loginv)).click();
-Thread.sleep(4000);
+//String WC_Loginv=prop.getProperty("WC_login");
+//driver.findElement(By.xpath(WC_Loginv)).click();
+//Thread.sleep(4000);
 
 String Create_One_here=prop.getProperty("Create_acct_here");
 driver.findElement(By.xpath(Create_One_here)).click();

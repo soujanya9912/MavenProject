@@ -28,4 +28,4 @@ How did u get Path
 FileInputStream fis = new FileInputStream(System.getProperty("user.dir")+"\\properties\\config.properties");
 		prop.load(fis);
 		
-		
+		hdgsjkfgdkjsfhdhfkdhfkdslfjdlsfjlkh
