@@ -3,13 +3,14 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.mavensouj.WC_UI_EndToEnd_Purchase_Webhosting_Product_NewDomain">
+      <class name="com.mavensouj.WC_Login_CreateAcct_ForgotPwd_UI">
         <methods>
           <include name="Initalization"/>
-          <include name="MenuHoveringHosting"/>
+          <include name="forgotpassword"/>
           <include name="Cleanup"/>
+          <include name="Createacct"/>
         </methods>
-      </class> <!-- com.mavensouj.WC_UI_EndToEnd_Purchase_Webhosting_Product_NewDomain -->
+      </class> <!-- com.mavensouj.WC_Login_CreateAcct_ForgotPwd_UI -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

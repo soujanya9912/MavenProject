@@ -11,12 +11,17 @@
 	import org.testng.annotations.BeforeClass;
 	import org.testng.annotations.Test;
 
+import com.github.javafaker.Faker;
+
 	public class WC_EndToEnd_Purchase_Webhosting_Under_ExistingDomain extends SetUp {
 
 		@Test
 		public void MenuHoveringHosting() throws InterruptedException {
 
-		
+			Faker faker=new Faker();
+			String firstName=faker.name().firstName();
+			String lastName=faker.name().lastName();
+			String email=firstName.toLowerCase() + "." + lastName.toLowerCase() + "@domain.com";
 		
 		System.out.println("welcome Main Menu--> Hosting");
 	    String Hosting_MenuTabval=prop.getProperty("Hosting_MenuTab");
@@ -68,15 +73,15 @@
 			String FirstNData=prop.getProperty("FN_Data");
 			driver.findElement(By.xpath(FirtsName)).sendKeys(FirstNData);
 			//driver.findElement(By.xpath("//input[@id='#/properties/firstname']")).sendKeys("altonavv north");
-			String lastName=prop.getProperty("lastName");
+			String lastName1=prop.getProperty("lastName");
 			String lastNData=prop.getProperty("LN_Data");
-			driver.findElement(By.xpath(lastName)).sendKeys(lastNData);
+			driver.findElement(By.xpath(lastName1)).sendKeys(lastNData);
 			
 			//driver.findElement(By.xpath("//input[@id='#/properties/lastname']")).sendKeys("ffestlvvvastname");
 			
 			String Email=prop.getProperty("Acct_Email");
-			String EmailD=prop.getProperty("Email_Data");
-			driver.findElement(By.xpath(Email)).sendKeys(EmailD);
+		//	String EmailD=prop.getProperty("Email_Data");
+			driver.findElement(By.xpath(Email)).sendKeys(email);
 		
 			String Password=prop.getProperty("Acct_Pwd");
 			String Pwd_Dataaa=prop.getProperty("Pwd_Data");
